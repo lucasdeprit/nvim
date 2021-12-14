@@ -58,7 +58,7 @@ Plug 'alvan/vim-closetag'
 
 ""autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions=['coc-prettier', 'coc-tsserver', 'coc-emmet', 'coc-tslint', 'coc-prettier', 'coc-html', 'coc-explorer']
+let g:coc_global_extensions=['coc-prettier', 'coc-tsserver', 'coc-emmet', 'coc-tslint', 'coc-prettier', 'coc-html', 'coc-explorer', 'coc-powershell', 'coc-snippets']
 
 "fzf file explorer
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -81,6 +81,7 @@ let mapleader=" "
 " keymaps with set hiddenleader
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>d :bd<CR>
 map <C-p> :Files<CR>
 
 "COC ON TAB
