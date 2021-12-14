@@ -24,7 +24,9 @@
     "ad": "addDirectory",
     "pf": "pasteFile",
     "cf": "copyFile",
-    "q": "quit"
+    "q": "quit",
+    "<<": "gitStage",
+    ">>": "gitUnstage"
   }
 }
  
