@@ -1,4 +1,4 @@
-# nvim Migrated to ([Nvim Lua](https://github.com/lucasdeprit/nvim-lua))
+# Nvim for Windows
 
 My personal nvim configuration for windows:
 
