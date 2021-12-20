@@ -71,6 +71,9 @@ Plug 'yggdroot/indentline'
 Plug 'leafgarland/typescript-vim'
 Plug 'ianks/vim-tsx'
 
+"startify
+Plug 'mhinz/vim-startify'
+
 " Plugins
 call plug#end()
 
@@ -153,4 +156,16 @@ else
   set signcolumn=yes
 endif
 
+"dont chech python2 provider
+let g:loaded_python_provider = 0
 
+"startify
+
+let g:startify_custom_header = [
+\ '███╗░░██╗██╗░░░██╗██╗███╗░░░███╗██╗░░░░░██╗░░░██╗░█████╗░██╗░░██╗',
+\ '████╗░██║██║░░░██║██║████╗░████║██║░░░░░██║░░░██║██╔══██╗██║░██╔╝',
+\ '██╔██╗██║╚██╗░██╔╝██║██╔████╔██║██║░░░░░██║░░░██║███████║█████═╝░',
+\ '██║╚████║░╚████╔╝░██║██║╚██╔╝██║██║░░░░░██║░░░██║██╔══██║██╔═██╗░',
+\ '██║░╚███║░░╚██╔╝░░██║██║░╚═╝░██║███████╗╚██████╔╝██║░░██║██║░╚██╗',
+\ '╚═╝░░╚══╝░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝╚══════╝░╚═════╝░╚═╝░░╚═╝╚═╝░░╚═╝',
+\ ]
