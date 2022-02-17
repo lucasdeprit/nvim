@@ -58,7 +58,7 @@ Plug 'alvan/vim-closetag'
 
 ""autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions=['coc-prettier', 'coc-tsserver', 'coc-emmet', 'coc-tslint', 'coc-prettier', 'coc-html', 'coc-explorer', 'coc-powershell', 'coc-snippets']
+let g:coc_global_extensions=['coc-prettier', 'coc-tsserver', 'coc-emmet', 'coc-tslint', 'coc-prettier', 'coc-html', 'coc-explorer', 'coc-powershell', 'coc-snippets', 'coc-java']
 
 "fzf file explorer
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
