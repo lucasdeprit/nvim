@@ -27,6 +27,7 @@
     "q": "quit",
     "<<": "gitStage",
     ">>": "gitUnstage"
-  }
+  },
+  "snippets.ultisnips.pythonPrompt": false
 }
  
