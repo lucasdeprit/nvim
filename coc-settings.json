@@ -1,10 +1,30 @@
 {
-      "prettier.tslintIntegration": true,
-      "prettier.eslintIntegration": false,
-      "coc.preferences.formatOnSaveFiletypes": [
-            "css", "markdown","javascript", "javascriptreact","typescript", "typescriptreact", "typescript.tsx"
-      ],
- //explorer
+  "prettier.tslintIntegration": true,
+  "prettier.eslintIntegration": false,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.eslintIntegration": true,
+  "eslint.autoFix": true,
+  "eslint.autoFixOnSave": false,
+  "eslint.format.enable": true,
+  "eslint.filetypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.run": "onType",
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "markdown",
+    //"javascript",
+    //"javascriptreact",
+    //"typescript",
+    //"typescriptreact",
+    //"typescript.tsx",
+    "json"
+  ],
+  //explorer
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.file.showHiddenFiles": true,
@@ -30,4 +50,3 @@
   },
   "snippets.ultisnips.pythonPrompt": false
 }
- 

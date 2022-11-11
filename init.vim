@@ -24,7 +24,6 @@ set relativenumber
 set sw=4 			
 set clipboard=unnamed			"para poder utilizar el portapapeles del sistema operativo 'esto permite poder copiar y pegar desde cualquier parte a nvim y viceversa.	
 
-
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 "**UBUNTU**
@@ -58,7 +57,15 @@ Plug 'alvan/vim-closetag'
 
 ""autocomplete
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions=['coc-prettier', 'coc-tsserver', 'coc-emmet', 'coc-tslint', 'coc-prettier', 'coc-html', 'coc-explorer', 'coc-powershell', 'coc-snippets', 'coc-java']
+let g:coc_global_extensions=['coc-prettier', 'coc-tsserver', 'coc-emmet', 'coc-tslint', 'coc-prettier', 'coc-html', 'coc-explorer', 'coc-powershell', 'coc-snippets', 'coc-java', 'coc-eslint']
+
+" Install Eslint
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+
+let g:coc_global_extensions += ['coc-eslint']
+
+endif
 
 "fzf file explorer
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -76,6 +83,9 @@ Plug 'mhinz/vim-startify'
 
 " Plugins
 call plug#end()
+
+autocmd BufWritePre *.ts call CocAction('runCommand', 'eslint.executeAutofix')
+autocmd BufWritePre *.js call CocAction('runCommand', 'eslint.executeAutofix')
 
 " exit insert mode 
 inoremap ii <ESC>
@@ -98,6 +108,8 @@ inoremap <silent><expr> <Tab>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<Tab>" :
       \ coc#refresh()
+
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 "Tab between buffers 
 nnoremap <S-tab> :bp<CR>
@@ -126,8 +138,6 @@ colorscheme onedark 			"activar el tema onedark
 let g:airline#extensions#tabline#enabled = 1	"muestra la linea de pestaña en la que estamos buffer
 let g:airline#extensions#tabline#formatter = 'unique_tail'	"muestra solo el nombre del archivo que estamos modificando
 let g:airline_theme='onedark'	"el tema de airline
-
-
 
 "configuracion por defecto de coc
 " TextEdit might fail if hidden is not set.
